@@ -16,7 +16,7 @@ import java.util.Scanner;
       Boolean exit = true;
 
         while (exit) {
-            System.out.print("Greet Someone ");
+            System.out.print("ENTER COMMAND OR HELP TO SEE VALID COMMANDS ");
             String name = myObj.nextLine();
 
             String[] enteredName = name.split(" ");  // Splits string array by checking the spaces
@@ -52,6 +52,26 @@ import java.util.Scanner;
 
             else if (command.equals("exit")){
                 exit = false;
+            }
+
+            else if (command.equals("help")){
+                greet.help();
+            }
+
+            else if (command.equals("clear")){
+                greet.clear();
+            }
+
+            else if (command.equals("removeName")){
+                greet.removeName(userName);
+            }
+
+            else if (command.equals("greeted")){
+                greet.greeted();
+            }
+
+            else if (command.equals("greetedUser")){
+                System.out.println(greet.greetedUser(userName));
             }
         }
 
